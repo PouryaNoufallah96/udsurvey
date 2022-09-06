@@ -2,13 +2,14 @@ import type { FetchOptions } from 'ohmyfetch';
 import { IApiErrorResponse } from '~~/types';
 import { ErrorHandler } from '~~/utils/handle-error';
 import { useAuth } from '../auth';
+import { hash } from 'ohash';
 
 export const useCustomFetch = async<T>(url: string, options?: FetchOptions) => {
     const { API_BASE_URL: baseURL } = useRuntimeConfig();
     const { createMyError } = ErrorHandler();
-    const router = useRouter();
     return await useFetch<T>(url, {
         baseURL,
+        key: hash(['api-fetch', url, options]),
         initialCache: false,
         ...options,
         async onRequest({ options }) {

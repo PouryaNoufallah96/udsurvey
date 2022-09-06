@@ -8,7 +8,7 @@ export const useAuth = () => {
 
     const user = useState<IUser | null>('user', () => null);
 
-    const token = useCookie<string | null>("access_token", { default: null });
+    const token = useCookie<string | null>("access_token", { default: null, maxAge: 86400 });
 
     const isLoggedIn = computed<boolean>(() => user.value != null);
     const isAdmin = computed<boolean>(() => user.value?.isAdmin);

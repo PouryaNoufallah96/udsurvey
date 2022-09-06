@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "build": "nuxt build",
+        "start": "node .output/server/index.mjs"
+      }
+}

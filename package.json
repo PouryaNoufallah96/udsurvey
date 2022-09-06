@@ -1,9 +1,38 @@
-{
+{  
   "engines": {
-    "node": "14.17.3"
+  "node": "14.17.3"
+},
+  "name": "survey-web-app",
+  "private": true,
+  "scripts": {
+    "start": "node .output/server/index.mjs",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
-    "scripts": {
-        "build": "nitro build",
-        "start": "node .output/server/index.mjs"
-      }
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/tailwindcss": "^5.3.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "nuxt": "3.0.0-rc.9",
+    "primeflex": "^3.2.1",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.15.0",
+    "sass": "^1.54.3"
+  },
+  "dependencies": {
+    "@alireza-ab/vue3-persian-datepicker": "^1.0.1",
+    "@vee-validate/i18n": "^4.6.5",
+    "@vee-validate/rules": "^4.6.4",
+    "click-outside-vue3": "^4.0.1",
+    "defu": "^6.1.0",
+    "jalali-moment": "^3.3.11",
+    "moment": "^2.29.4",
+    "vee-validate": "^4.6.4",
+    "yup": "^0.32.11"
+  }
 }

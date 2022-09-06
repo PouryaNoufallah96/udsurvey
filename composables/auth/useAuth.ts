@@ -56,6 +56,18 @@ export const useAuth = () => {
         }
     }
 
+    const ssrCheck = async () => {
+
+        try {
+            const { result } = await useBaseFetch<IApiResponse<IUser>>('account/ssr-check', { method: 'POST' })
+            console.log(result);
+        }
+        catch (err) {
+            console.log(err);
+        }
+
+    }
+
     return {
         setToken,
         user,
@@ -65,5 +77,6 @@ export const useAuth = () => {
         login,
         logout,
         checkAuthentication,
+        ssrCheck
     }
 }

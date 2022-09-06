@@ -44,12 +44,12 @@ export const useAuth = () => {
         if (!isLoggedIn.value) {
             try {
                 const { result } = await useBaseFetch<IApiResponse<IUser>>('account/check-authentication', { method: 'POST' })
-                console.log(result);
+                console.log('result check auth', result);
                 if (result)
                     setUser(result)
             }
             catch (err) {
-                console.log(err);
+                console.log('result err check auth', err);
                 setUser(null);
                 setToken(null);
             }
@@ -64,10 +64,10 @@ export const useAuth = () => {
                     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Itm-2YjYsduM2Kcg2YbZiNmB2YTYp9itIiwibmFtZWlkIjoiNDA1NzAiLCJyb2xlIjoiMSIsIm5iZiI6MTY2MjQ5MTQ3MCwiZXhwIjoxNjYyNTM0NjcwLCJpYXQiOjE2NjI0OTE0NzB9.emUVQpmQdIELXZjLJ00LO_n1RmcVqPqX2p32ocBdO_Q'
                 }
             })
-            console.log(result);
+            console.log('result ssr', result);
         }
         catch (err) {
-            console.log(err);
+            console.log('result err ssr', err);
         }
 
     }

@@ -1,1 +1,0 @@
-import{G as e}from"./entry.87f1605d.js";function d(){const r=e(),t=3e3,n=(s,o,c)=>{r.add({severity:s,summary:o,detail:c,life:t})};return{info:(s,o)=>{n("info",s,o)},warning:(s,o)=>{n("warning",s,o)},error:(s,o)=>{n("error",s,o)},success:(s,o)=>{n("success",s,o)}}}export{d as T};

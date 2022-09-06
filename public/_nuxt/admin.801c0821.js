@@ -1,1 +1,0 @@
-import{a4 as i,a3 as t,q as e}from"./entry.87f1605d.js";const u=i(async(o,s)=>{const{isAdmin:a,isLoggedIn:n}=t();if(!n.value)return e({name:"login"});if(!a.value)return e({name:"index"})});export{u as default};

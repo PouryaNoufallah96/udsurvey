@@ -1,1 +1,0 @@
-import{a1 as o}from"./entry.87f1605d.js";function D(){const Y=a=>o(a).format("YYYY-MM-DD");return{formatDate:Y,gregorianToJalali:a=>{var r=Y(a);return o(r,"YYYY-MM-DD").locale("fa").format("YYYY-MM-DD")},jalaliToGregorian:(a,r,t)=>o.from(`$${a}-${r}-${t}`,"fa","YYYY-MM-DD").format("YYYY-MM-DD")}}export{D as C};

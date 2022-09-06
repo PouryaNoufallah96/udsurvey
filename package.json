@@ -3,7 +3,7 @@
     "node": "14.17.3"
   },
     "scripts": {
-        "build": "nuxt build",
+        "build": "nitro build",
         "start": "node .output/server/index.mjs"
       }
 }

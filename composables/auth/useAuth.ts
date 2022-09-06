@@ -59,7 +59,7 @@ export const useAuth = () => {
     const ssrCheck = async () => {
 
         try {
-            const { result } = await useBaseFetch<IApiResponse<IUser>>('account/ssr-check', { method: 'POST' })
+            const result = await $fetch('account/ssr-check', { method: 'POST' })
             console.log(result);
         }
         catch (err) {
@@ -67,7 +67,6 @@ export const useAuth = () => {
         }
 
     }
-
     return {
         setToken,
         user,

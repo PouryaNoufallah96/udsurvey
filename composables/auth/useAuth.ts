@@ -43,7 +43,8 @@ export const useAuth = () => {
     const checkAuthentication = async () => {
         if (!isLoggedIn.value) {
             try {
-                const { result } = await useBaseFetch<IApiResponse<IUser>>('account/check-authentication', { method: 'POST' })
+                const { API_BASE_URL: baseURL } = useRuntimeConfig();
+                const { result } = await $fetch<IApiResponse<IUser>>('account/check-authentication', { baseURL, method: 'POST', headers: { 'Authorization': `Bearer ${token.value}` } })
                 if (result)
                     setUser(result)
             }

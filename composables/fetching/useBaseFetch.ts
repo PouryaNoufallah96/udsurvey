@@ -8,10 +8,6 @@ export const useBaseFetch = async<T>(url: string, options?: FetchOptions) => {
     const { createMyError } = ErrorHandler();
     return await $fetch<T>(url, {
         baseURL,
-        Headers: {
-            Accept: 'application/json',
-            "Content-Type": "application/json; charset=utf-8"
-        },
         ...options,
         async onRequest({ options }) {
             const { token } = useAuth();

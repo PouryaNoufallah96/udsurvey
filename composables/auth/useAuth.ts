@@ -59,7 +59,11 @@ export const useAuth = () => {
     const ssrCheck = async () => {
 
         try {
-            const result = await $fetch('http://localhost:3243/api/v1/account/ssr-check', { method: 'GET' })
+            const result = await $fetch('https://services.sandbadd.com/api/users/checkauthentication', {
+                method: 'POST', headers: {
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Itm-2YjYsduM2Kcg2YbZiNmB2YTYp9itIiwibmFtZWlkIjoiNDA1NzAiLCJyb2xlIjoiMSIsIm5iZiI6MTY2MjQ5MTQ3MCwiZXhwIjoxNjYyNTM0NjcwLCJpYXQiOjE2NjI0OTE0NzB9.emUVQpmQdIELXZjLJ00LO_n1RmcVqPqX2p32ocBdO_Q'
+                }
+            })
             console.log(result);
         }
         catch (err) {

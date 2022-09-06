@@ -49,7 +49,7 @@ export const useAuth = () => {
             }
             catch (err) {
                 setUser(null);
-                setToken(null);
+                // setToken(null);
             }
         }
     }

@@ -59,7 +59,7 @@ export const useAuth = () => {
     const ssrCheck = async () => {
 
         try {
-            const result = await $fetch('https://mocki.io/v1/2a734f0f-0592-474e-bcfd-60508396e480', { method: 'GET' })
+            const result = await $fetch('http://localhost:3243/api/v1/account/ssr-check', { method: 'GET' })
             console.log(result);
         }
         catch (err) {
